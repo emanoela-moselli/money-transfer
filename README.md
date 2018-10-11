@@ -5,11 +5,15 @@
 RESTful API for money transfers between accounts executable as a standalone program.
 
 ## Technologies:
-*JAX-RS
-*TomEE App Server
-*JPA
-*CDI
-*H2 Database
+JAX-RS
+
+TomEE App Server
+
+JPA
+
+CDI
+
+H2 Database
 
 ## To run:
 ```
@@ -20,7 +24,9 @@ mvn install tomee:run
 
 ###### Add Account
 **Path:**  http://localhost:8080/moneyTransfer/account
+
 **Method:** POST
+
 **Example:** 
 ```
 {
@@ -30,19 +36,24 @@ mvn install tomee:run
 ```
 ###### Get Account
 **Path:**  http://localhost:8080/moneyTransfer/account/{accountNumber}
+
 **Method:** GET
 
 ###### Withdraw
 **Path:**  http://localhost:8080/moneyTransfer/account/withdraw/{accountNumber}/{amount}
+
 **Method:** POST
 
 ###### Deposit
 **Path:**  http://localhost:8080/moneyTransfer/account/deposit/{accountNumber}/{amount}
+
 **Method:** POST
 
 ###### Transfer between accounts
 **Path:**  http://localhost:8080/moneyTransfer/transfer
+
 **Method:** PUT
+
 **Example:** 
 ```
 {
