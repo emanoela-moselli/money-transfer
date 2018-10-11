@@ -1,11 +1,3 @@
-https://www.gajotres.net/best-available-java-restful-micro-frameworks/
-
-https://hashnode.com/post/what-is-the-best-stack-to-build-a-restful-api-in-java-8-citbgv7bx0ca38y53ysf4o3jn
-
-
-
-
-
 
 # money-transfer
 
