@@ -25,19 +25,7 @@
 				<version>1.7.5</version>
 				<configuration>
 					<tomeeVersion>1.7.5</tomeeVersion>
-					<tomeeClassifier>plume</tomeeClassifier>
-					<webapps>
-						<webapp>revolut:moneyTransfer:1.0?name=ROOT</webapp>
-					</webapps>
-					<!-- <libs> -->
-					<!-- <lib>remove:geronimo-jpa</lib> -->
-					<lib>org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final</lib>
-					<!-- https://mvnrepository.com/artifact/antlr/antlr -->
-
-
-
-					<!-- <lib>remove:openjpa-</lib> -->
-					<!-- </libs> -->
+					<tomeeClassifier>plus</tomeeClassifier>
 					<inlinedTomEEXml>
 						<Resource id="h2DataBase" type="javax.sql.DataSource">
 							JdbcDriver org.h2.Driver
@@ -47,21 +35,47 @@
 					</inlinedTomEEXml>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.7.201606060606</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.openejb.maven</groupId>
+			<artifactId>tomee-embedded-maven-plugin</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>persistence-api</artifactId>
-			<version>1.0.2</version>
 		</dependency>
 
 		<dependency>
@@ -71,81 +85,41 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.tomee</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.tomee</groupId>
-			<artifactId>tomee-embedded</artifactId>
-			<version>7.1.0</version>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-xc</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>openejb-cxf-rs</artifactId>
+			<version>4.7.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-client</artifactId>
+			<version>3.1.17</version>
+			<scope>test</scope>
 		</dependency>
 		
-		<!-- Hibernate -->      
-    <dependency>
-        <groupId>antlr</groupId>
-        <artifactId>antlr</artifactId>
-        <version>2.7.7</version>
-    </dependency>       
-    <dependency>
-        <groupId>dom4j</groupId>
-        <artifactId>dom4j</artifactId>
-        <version>1.6.1</version>
-    </dependency>
-    <dependency>
-        <groupId>org.hibernate.common</groupId>
-        <artifactId>hibernate-commons-annotations</artifactId>
-        <version>4.0.5.Final</version>
-    </dependency>
-    <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>4.2.16.Final</version>
-    </dependency>
-    <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-ehcache</artifactId>
-        <version>4.2.16.Final</version>
-    </dependency>
-    <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-entitymanager</artifactId>
-        <version>4.2.16.Final</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
-<dependency>
-    <groupId>org.hibernate.validator</groupId>
-    <artifactId>hibernate-validator</artifactId>
-    <version>6.0.13.Final</version>
-</dependency>
-
-    <dependency>
-        <groupId>org.jboss.logging</groupId>
-        <artifactId>jboss-logging</artifactId>
-        <version>3.1.0.GA</version>
-    </dependency>
-    <dependency>
-        <groupId>org.javassist</groupId>
-        <artifactId>javassist</artifactId>
-        <version>3.15.0-GA</version>
-    </dependency>
-    
-    <dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>javaee-api</artifactId>
-    <version>7.0</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
-<dependency>
-    <groupId>javax.persistence</groupId>
-    <artifactId>persistence-api</artifactId>
-    <version>1.0.2</version>
-</dependency>
-
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+		    <version>1.10.19</version>
+		    <scope>test</scope>
+		</dependency>
+		
 
 	</dependencies>
+
 
 
 </project>

@@ -1,3 +1,5 @@
-/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/AppTest.java
-/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/TransactionTest.java
-/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/AccountTest.java
+/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/integration/AccountTest.java
+/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/unit/AccountServiceUnitTest.java
+/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/integration/AccountControllerTest.java
+/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/integration/BaseTest.java
+/Users/emanoelamoselli/Documents/workspace2/moneyTransfer/src/test/java/revolut/moneyTransfer/integration/TransactionTest.java
