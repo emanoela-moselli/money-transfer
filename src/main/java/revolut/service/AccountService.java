@@ -1,13 +1,13 @@
 package revolut.service;
 
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import revolut.dao.AccountDAO;
 import revolut.dto.AccountDTO;
 import revolut.entity.Account;
 import revolut.exception.AccountException;
-
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 @Named
 @Stateless

@@ -35,6 +35,7 @@
 					</inlinedTomEEXml>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -69,6 +70,7 @@
 			<groupId>org.apache.openejb.maven</groupId>
 			<artifactId>tomee-embedded-maven-plugin</artifactId>
 			<version>1.7.5</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -109,14 +111,14 @@
 			<version>3.1.17</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
-		    <groupId>org.mockito</groupId>
-		    <artifactId>mockito-all</artifactId>
-		    <version>1.10.19</version>
-		    <scope>test</scope>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
 		</dependency>
-		
+
 
 	</dependencies>
 

@@ -1,20 +1,20 @@
 package revolut.moneyTransfer.integration;
 
+import static org.junit.Assert.assertEquals;
+
+import javax.ejb.embeddable.EJBContainer;
+import javax.naming.Context;
+import javax.naming.NamingException;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+
 import revolut.dto.AccountDTO;
 import revolut.exception.AccountException;
 import revolut.service.AccountService;
-
-import javax.ejb.embeddable.EJBContainer;
-import javax.naming.Context;
-import javax.naming.NamingException;
-import javax.persistence.OptimisticLockException;
-
-import static org.junit.Assert.assertEquals;
 
 
 @RunWith(JUnit4.class)

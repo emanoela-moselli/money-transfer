@@ -1,17 +1,7 @@
 package revolut.moneyTransfer.integration;
 
-import org.apache.cxf.jaxrs.client.WebClient;
-import org.apache.openejb.OpenEjbContainer;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-import revolut.dto.AccountDTO;
-import revolut.dto.ResponseDTO;
-import revolut.dto.TransactionDTO;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
@@ -20,10 +10,18 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import java.util.Properties;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.apache.cxf.jaxrs.client.WebClient;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+
+import revolut.dto.AccountDTO;
+import revolut.dto.ResponseDTO;
+import revolut.dto.TransactionDTO;
 
 @RunWith(JUnit4.class)
 public class AccountControllerTest extends BaseTest  {

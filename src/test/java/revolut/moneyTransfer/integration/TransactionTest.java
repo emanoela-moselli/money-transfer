@@ -1,11 +1,10 @@
 package revolut.moneyTransfer.integration;
 
-import junit.framework.TestCase;
-import org.junit.Before;
-import revolut.dto.AccountDTO;
-import revolut.exception.AccountException;
-import revolut.service.AccountService;
-import revolut.service.TransactionService;
+import static org.junit.Assert.assertEquals;
+
+import javax.ejb.embeddable.EJBContainer;
+import javax.naming.Context;
+import javax.naming.NamingException;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -13,14 +12,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import javax.ejb.embeddable.EJBContainer;
-import javax.inject.Inject;
-import javax.naming.Context;
-import javax.naming.NamingException;
-
-import static org.junit.Assert.assertEquals;
-
-import java.util.HashMap;
+import revolut.dto.AccountDTO;
+import revolut.exception.AccountException;
+import revolut.service.AccountService;
+import revolut.service.TransactionService;
 
 
 @RunWith(JUnit4.class)

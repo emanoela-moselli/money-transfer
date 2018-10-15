@@ -17,7 +17,8 @@ H2 Database
 
 ## To run:
 ```
-mvn install tomee:run
+build - mvn clean package tomee:exec
+run - java -jar target/ROOT-exec.jar
 ```
 
 ## Availables services:
